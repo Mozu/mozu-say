@@ -1,7 +1,7 @@
 {
-  "name": "yosay",
+  "name": "mosay",
   "version": "1.1.0",
-  "description": "Tell Yeoman what to say",
+  "description": "Say it loud. Say it with a large Mozu logo.",
   "license": "BSD",
   "keywords": [
     "cli",
@@ -14,11 +14,10 @@
     "message",
     "ansi"
   ],
-  "homepage": "http://yeoman.io",
-  "author": "The Yeoman Team",
-  "repository": "yeoman/yosay",
+  "author": "James Zetlen @ Volusion and the Yeoman team",
+  "repository": "zetlen/mosay",
   "bin": {
-    "yosay": "cli.js"
+    "mosay": "cli.js"
   },
   "files": [
     "index.js",

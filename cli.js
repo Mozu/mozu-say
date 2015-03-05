@@ -1,11 +1,11 @@
 #!/usr/bin/env node
 'use strict';
 var pkg = require('./package.json');
-var yosay = require('./');
+var mosay = require('./');
 
 require('taketalk')({
   init: function (input, options) {
-    console.log(yosay(input, options));
+    console.log(mosay(input, options));
   },
   help: function () {
     console.log([
@@ -18,8 +18,8 @@ require('taketalk')({
       '    echo <string> | mosay',
       '',
       '  Example',
-      '    yosay "Who\'s ready for seasonal flavors?!"',
-      yosay("Who\'s ready for seasonal flavors?!")
+      '    mosay "Who\'s ready for seasonal flavors?!"',
+      mosay("Who\'s ready for seasonal flavors?!")
     ].join('\n'));
   },
   version: pkg.version

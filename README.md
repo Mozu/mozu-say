@@ -1,8 +1,8 @@
-# yosay [![Build Status](https://travis-ci.org/yeoman/yosay.svg?branch=master)](https://travis-ci.org/yeoman/yosay)
+# mosay [![Build Status](https://travis-ci.org/yeoman/mosay.svg?branch=master)](https://travis-ci.org/yeoman/mosay)
 
-> Tell Yeoman what to say
+> Tell Yeoman what to say, and do it Mozu style.
 
-Like [cowsay](http://en.wikipedia.org/wiki/Cowsay), but less cow.
+Like [cowsay](http://en.wikipedia.org/wiki/Cowsay), but less cow, and like [yosay](https://github.com/yeoman/yosay) but with more stylized M and less Wes Anderson character.
 
 ![](screenshot.png)
 
@@ -10,59 +10,95 @@ Like [cowsay](http://en.wikipedia.org/wiki/Cowsay), but less cow.
 ## Install
 
 ```sh
-$ npm install --save yosay
+$ npm install --save mosay
 ```
 
 
 ## Usage
 
 ```js
-var yosay = require('yosay');
+var mosay = require('mosay');
 
-console.log(yosay('Hello, and welcome to my fantastic generator full of whimsy and bubble gum!'));
+console.log(mosay('Follow the prompts to scaffold a Mozu Extension package.' +
+'When the extension framework is installed, you can run `yo mozuxd:action` to' +
+'install actions.'));
 
 /*
-     _-----_
-    |       |    .--------------------------.
-    |--(o)--|    | Hello, and welcome to my |
-   `---------´   | fantastic generator full |
-    ( _´U`_ )    |   of whimsy and bubble   |
-    /___A___\    |           gum!           |
-     |  ~  |     '--------------------------'
-   __'.___.'__
- ´   `  |° ´ Y `
+
+ ;ppppppppppppppppppppppppppppppppppppppppppppppp,       
+ MOZUMOZUMOZUMOZUMOZUMOZUMOZUMOZUMOZUMOZUMOZUMOZUMOZQp   
+ MOZUMOZUMOZUMOZUMOZUMOZUMOZUMOZUMOZUMOZUMOZUMOZUMOZUMQ, 
+ MOZUMOZUMOZUMOZUMOZUMOZUMOZUMOZUMOZUMOZUMOZUMOZUMOZUMOZp
+ MOZUMOZUMOZUMOZUMOZUMOZUMOZUMOZUMOZUMOZUMOZUMOZUMOZUMOZQ
+ MOZUMOZUMO ``````````` MOZUMOZUMO '````````'`5MOZUMOZUMO
+ MOZUMOZUMO             MOZUMOZUMO             MOZUMOZUMO
+ MOZUMOZUMO             MOZUMOZUMO             MOZUMOZUMO
+ MOZUMOZUMO             MOZUMOZUMO             MOZUMOZUMO
+ MOZUMOZUMO             MOZUMOZUMO             MOZUMOZUMO
+ MOZUMOZUMO             MOZUMOZUMO             MOZUMOZUMO
+ MOZUMOZUMO             MOZUMOZUMO             MOZUMOZUMO
+ MOZUMOZUMO             MOZUMOZUMO             MOZUMOZUMO
+ MOZUMOZUMO             MOZUMOZUMO             MOZUMOZUMO
+ MOZUMOZUMO             MOZUMOZUMO             MOZUMOZUMO
+ MOZUMOZUMO             MOZUMOZUMO             MOZUMOZUMO
+ MOZUMOZUMO             MOZUMOZUMO             MOZUMOZUMO
+ MOZUMOZUMO             MOZUMOZUMO             MOZUMOZUMO
+ BMOZUMOZUM             MOZUMOZUMO             MOZUMOZUMO
+ .------------------------------------------------------.
+ |    Follow the prompts to scaffold a Mozu Extension   |
+ |  package. When the extension framework is installed, |
+ |  you can run `yo mozuxd:action` to install actions.  |
+ '------------------------------------------------------'
+
  */
 ```
 
-*You can style your text with [chalk](https://github.com/sindresorhus/chalk) before passing it to `yosay`.*
+*You can style your text with [chalk](https://github.com/sindresorhus/chalk) before passing it to `mosay`.*
 
 
 ## CLI
 
 ```
-$ npm install --global yosay
+$ npm install --global mosay
 ```
 
 ```
-$ yosay --help
+$ mosay --help
+
+  Say it loud. Say it with a large Mozu logo.
 
   Usage
-    yosay <string>
-    yosay <string> --maxLength 8
-    echo <string> | yosay
+    mosay <string>
+    mosay <string> --maxLength 8
+    echo <string> | mosay
 
   Example
-    yosay 'Sindre is a horse'
+    mosay "Who's ready for seasonal flavors?!"
 
-     _-----_
-    |       |    .--------------------------.
-    |--(o)--|    |     Sindre is a horse    |
-   `---------´   '--------------------------'
-    ( _´U`_ )
-    /___A___\
-     |  ~  |
-   __'.___.'__
- ´   `  |° ´ Y `
+ ;ppppppppppppppppppppppppppppppppppppppppppppppp,       
+ MOZUMOZUMOZUMOZUMOZUMOZUMOZUMOZUMOZUMOZUMOZUMOZUMOZQp   
+ MOZUMOZUMOZUMOZUMOZUMOZUMOZUMOZUMOZUMOZUMOZUMOZUMOZUMQ, 
+ MOZUMOZUMOZUMOZUMOZUMOZUMOZUMOZUMOZUMOZUMOZUMOZUMOZUMOZp
+ MOZUMOZUMOZUMOZUMOZUMOZUMOZUMOZUMOZUMOZUMOZUMOZUMOZUMOZQ
+ MOZUMOZUMO ``````````` MOZUMOZUMO '````````'`5MOZUMOZUMO
+ MOZUMOZUMO             MOZUMOZUMO             MOZUMOZUMO
+ MOZUMOZUMO             MOZUMOZUMO             MOZUMOZUMO
+ MOZUMOZUMO             MOZUMOZUMO             MOZUMOZUMO
+ MOZUMOZUMO             MOZUMOZUMO             MOZUMOZUMO
+ MOZUMOZUMO             MOZUMOZUMO             MOZUMOZUMO
+ MOZUMOZUMO             MOZUMOZUMO             MOZUMOZUMO
+ MOZUMOZUMO             MOZUMOZUMO             MOZUMOZUMO
+ MOZUMOZUMO             MOZUMOZUMO             MOZUMOZUMO
+ MOZUMOZUMO             MOZUMOZUMO             MOZUMOZUMO
+ MOZUMOZUMO             MOZUMOZUMO             MOZUMOZUMO
+ MOZUMOZUMO             MOZUMOZUMO             MOZUMOZUMO
+ MOZUMOZUMO             MOZUMOZUMO             MOZUMOZUMO
+ BMOZUMOZUM             MOZUMOZUMO             MOZUMOZUMO
+ .------------------------------------------------------.
+ |          Who's ready for seasonal flavors?!          |
+ '------------------------------------------------------'
+
+
 ```
 
 
