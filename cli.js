@@ -13,13 +13,13 @@ require('taketalk')({
       '  ' + pkg.description,
       '',
       '  Usage',
-      '    yosay <string>',
-      '    yosay <string> --maxLength 8',
-      '    echo <string> | yosay',
+      '    mosay <string>',
+      '    mosay <string> --maxLength 8',
+      '    echo <string> | mosay',
       '',
       '  Example',
-      '    yosay "Sindre is a horse"',
-      yosay('Sindre is a horse')
+      '    yosay "Who\'s ready for seasonal flavors?!"',
+      yosay("Who\'s ready for seasonal flavors?!")
     ].join('\n'));
   },
   version: pkg.version

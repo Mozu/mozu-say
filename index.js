@@ -7,21 +7,33 @@ var stripAnsi = require('strip-ansi');
 var ansiStyles = require('ansi-styles');
 var ansiRegex = require('ansi-regex')();
 
-var topOffset = 3;
-var leftOffset = 17;
-var defaultGreeting =
-  '\n     _-----_' +
-  '\n    |       |    ' +
-  '\n    |' + chalk.red('--(o)--') + '|    ' +
-  '\n   `---------´   ' +
-  '\n    ' + chalk.yellow('(') + ' _' + chalk.yellow('´U`') + '_ ' + chalk.yellow(')') + '    ' +
-  '\n    /___A___\\    ' +
-  '\n     ' + chalk.yellow('|  ~  |') + '     ' +
-  '\n   __' + chalk.yellow('\'.___.\'') + '__   ' +
-  '\n ´   ' + chalk.red('`  |') + '° ' + chalk.red('´ Y') + ' ` ';
+var topOffset = 1;
+var leftOffset = 1
+
+var defaultGreeting = chalk.red(
+"\n ;ppppppppppppppppppppppppppppppppppppppppppppppp,       " +
+"\n MOZUMOZUMOZUMOZUMOZUMOZUMOZUMOZUMOZUMOZUMOZUMOZUMOZQp   " +
+"\n MOZUMOZUMOZUMOZUMOZUMOZUMOZUMOZUMOZUMOZUMOZUMOZUMOZUMQ, " +
+"\n MOZUMOZUMOZUMOZUMOZUMOZUMOZUMOZUMOZUMOZUMOZUMOZUMOZUMOZp" +
+"\n MOZUMOZUMOZUMOZUMOZUMOZUMOZUMOZUMOZUMOZUMOZUMOZUMOZUMOZQ" +
+"\n MOZUMOZUMO ``````````` MOZUMOZUMO '````````'`5MOZUMOZUMO" +
+"\n MOZUMOZUMO             MOZUMOZUMO             MOZUMOZUMO" +
+"\n MOZUMOZUMO             MOZUMOZUMO             MOZUMOZUMO" +
+"\n MOZUMOZUMO             MOZUMOZUMO             MOZUMOZUMO" +
+"\n MOZUMOZUMO             MOZUMOZUMO             MOZUMOZUMO" +
+"\n MOZUMOZUMO             MOZUMOZUMO             MOZUMOZUMO" +
+"\n MOZUMOZUMO             MOZUMOZUMO             MOZUMOZUMO" +
+"\n MOZUMOZUMO             MOZUMOZUMO             MOZUMOZUMO" +
+"\n MOZUMOZUMO             MOZUMOZUMO             MOZUMOZUMO" +
+"\n MOZUMOZUMO             MOZUMOZUMO             MOZUMOZUMO" +
+"\n MOZUMOZUMO             MOZUMOZUMO             MOZUMOZUMO" +
+"\n MOZUMOZUMO             MOZUMOZUMO             MOZUMOZUMO" +
+"\n MOZUMOZUMO             MOZUMOZUMO             MOZUMOZUMO" +
+"\n BMOZUMOZUM             MOZUMOZUMO             MOZUMOZUMO" +
+"\n");
 
 module.exports = function (message, options) {
-  message = (message || 'Welcome to Yeoman, ladies and gentlemen!').trim();
+  message = (message || 'Welcome to Yeoman, powered by Mozu.').trim();
   options = options || {};
 
   /*
@@ -40,7 +52,7 @@ module.exports = function (message, options) {
    * Better implementations welcome :)
    */
 
-  var maxLength = 24;
+  var maxLength = 52;
   var frame;
   var styledIndexes = {};
   var completedString = '';
@@ -70,7 +82,7 @@ module.exports = function (message, options) {
     styledIndexes[offset] = styledIndexes[offset] ? styledIndexes[offset] + match : match;
   });
 
-  return wrap(stripAnsi(message), { width: maxLength })
+  return defaultGreeting + wrap(stripAnsi(message), { width: maxLength })
     .split(/\n/)
     .reduce(function (greeting, str, index, array) {
       var paddedString;
@@ -134,6 +146,6 @@ module.exports = function (message, options) {
       }
 
       return greeting;
-    }, defaultGreeting.split(/\n/))
+    }, [' '])
     .join('\n') + '\n';
 };
