@@ -11,25 +11,14 @@ var topOffset = 1;
 var leftOffset = 1
 
 var defaultGreeting = chalk.red(
-"\n ;ppppppppppppppppppppppppppppppppppppppppppppppp,       " +
-"\n MOZUMOZUMOZUMOZUMOZUMOZUMOZUMOZUMOZUMOZUMOZUMOZUMOZQp   " +
-"\n MOZUMOZUMOZUMOZUMOZUMOZUMOZUMOZUMOZUMOZUMOZUMOZUMOZUMQ, " +
-"\n MOZUMOZUMOZUMOZUMOZUMOZUMOZUMOZUMOZUMOZUMOZUMOZUMOZUMOZp" +
-"\n MOZUMOZUMOZUMOZUMOZUMOZUMOZUMOZUMOZUMOZUMOZUMOZUMOZUMOZQ" +
-"\n MOZUMOZUMO ``````````` MOZUMOZUMO '````````'`5MOZUMOZUMO" +
-"\n MOZUMOZUMO             MOZUMOZUMO             MOZUMOZUMO" +
-"\n MOZUMOZUMO             MOZUMOZUMO             MOZUMOZUMO" +
-"\n MOZUMOZUMO             MOZUMOZUMO             MOZUMOZUMO" +
-"\n MOZUMOZUMO             MOZUMOZUMO             MOZUMOZUMO" +
-"\n MOZUMOZUMO             MOZUMOZUMO             MOZUMOZUMO" +
-"\n MOZUMOZUMO             MOZUMOZUMO             MOZUMOZUMO" +
-"\n MOZUMOZUMO             MOZUMOZUMO             MOZUMOZUMO" +
-"\n MOZUMOZUMO             MOZUMOZUMO             MOZUMOZUMO" +
-"\n MOZUMOZUMO             MOZUMOZUMO             MOZUMOZUMO" +
-"\n MOZUMOZUMO             MOZUMOZUMO             MOZUMOZUMO" +
-"\n MOZUMOZUMO             MOZUMOZUMO             MOZUMOZUMO" +
-"\n MOZUMOZUMO             MOZUMOZUMO             MOZUMOZUMO" +
-"\n BMOZUMOZUM             MOZUMOZUMO             MOZUMOZUMO" +
+'\n ,,,,,,,,,,,,,,,,,,        ,,,,,,      ,,,,,,,,,,,,  ,,,      ,,, ' +       
+'\n SSSSSSSSSSSSSSSSSSSQ   ;QSSSSSSSSSQ,  SSSSSSSSSSSS  SSSQ    ]SSSQ' +       
+'\n SSS#""""@SSS""""YSSSQ  SSSS"""""QSSS  ^T777T@SSS#^  SSSQ    ]SSSQ' +       
+'\n SSS[    @SSS     SSS[  SSSb     ]SSS      ,QSSSN    SSSQ    ]SSSQ' +       
+'\n SSS[    @SSS     SSS[  SSSb     ]SSS     #SSSM|     SSSQ    ]SSSQ' +       
+'\n SSS[    @SSS     SSS[  SSSQ     @SSS   #QSSS^       SSSQ    ]SSSQ' +       
+'\n SSS[    @SSS     SSS[  QSSSQQQQQSSSF  SSSSSSSSSSSS  %SSSSSSSSSSSQ' +       
+'\n PPP"    "PPP     PPP+   ^FBWWWWBEP`   "PPPPPPPPPPT    "+PPPPPPPP"' +       
 "\n");
 
 module.exports = function (message, options) {
@@ -52,7 +41,7 @@ module.exports = function (message, options) {
    * Better implementations welcome :)
    */
 
-  var maxLength = 52;
+  var maxLength = 61;
   var frame;
   var styledIndexes = {};
   var completedString = '';
