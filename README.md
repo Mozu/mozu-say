@@ -1,6 +1,6 @@
-# mosay [![Build Status](https://travis-ci.org/yeoman/mosay.svg?branch=master)](https://travis-ci.org/yeoman/mosay)
+# mosay 
 
-> Tell Yeoman what to say, and do it Mozu style.
+> Tell Mozu what to say.
 
 Like [cowsay](http://en.wikipedia.org/wiki/Cowsay), but less cow, and like [yosay](https://github.com/yeoman/yosay) but with more stylized M and less Wes Anderson character.
 
@@ -20,37 +20,24 @@ $ npm install --save mosay
 var mosay = require('mosay');
 
 console.log(mosay('Follow the prompts to scaffold a Mozu Extension package.' +
-'When the extension framework is installed, you can run `yo mozuxd:action` to' +
-'install actions.'));
-
+'You\'ll get a directory structure, action file skeletons, and a test framework!'));
 /*
 
- ;ppppppppppppppppppppppppppppppppppppppppppppppp,       
- MOZUMOZUMOZUMOZUMOZUMOZUMOZUMOZUMOZUMOZUMOZUMOZUMOZQp   
- MOZUMOZUMOZUMOZUMOZUMOZUMOZUMOZUMOZUMOZUMOZUMOZUMOZUMQ, 
- MOZUMOZUMOZUMOZUMOZUMOZUMOZUMOZUMOZUMOZUMOZUMOZUMOZUMOZp
- MOZUMOZUMOZUMOZUMOZUMOZUMOZUMOZUMOZUMOZUMOZUMOZUMOZUMOZQ
- MOZUMOZUMO ``````````` MOZUMOZUMO '````````'`5MOZUMOZUMO
- MOZUMOZUMO             MOZUMOZUMO             MOZUMOZUMO
- MOZUMOZUMO             MOZUMOZUMO             MOZUMOZUMO
- MOZUMOZUMO             MOZUMOZUMO             MOZUMOZUMO
- MOZUMOZUMO             MOZUMOZUMO             MOZUMOZUMO
- MOZUMOZUMO             MOZUMOZUMO             MOZUMOZUMO
- MOZUMOZUMO             MOZUMOZUMO             MOZUMOZUMO
- MOZUMOZUMO             MOZUMOZUMO             MOZUMOZUMO
- MOZUMOZUMO             MOZUMOZUMO             MOZUMOZUMO
- MOZUMOZUMO             MOZUMOZUMO             MOZUMOZUMO
- MOZUMOZUMO             MOZUMOZUMO             MOZUMOZUMO
- MOZUMOZUMO             MOZUMOZUMO             MOZUMOZUMO
- MOZUMOZUMO             MOZUMOZUMO             MOZUMOZUMO
- BMOZUMOZUM             MOZUMOZUMO             MOZUMOZUMO
- .------------------------------------------------------.
- |    Follow the prompts to scaffold a Mozu Extension   |
- |  package. When the extension framework is installed, |
- |  you can run `yo mozuxd:action` to install actions.  |
- '------------------------------------------------------'
+ ,,,,,,,,,,,,,,,,,,        ,,,,,,      ,,,,,,,,,,,,  ,,,      ,,, 
+ SSSSSSSSSSSSSSSSSSSQ   ;QSSSSSSSSSQ,  SSSSSSSSSSSS  SSSQ    ]SSSQ
+ SSS#""""@SSS""""YSSSQ  SSSS"""""QSSS  ^T777T@SSS#^  SSSQ    ]SSSQ
+ SSS[    @SSS     SSS[  SSSb     ]SSS      ,QSSSN    SSSQ    ]SSSQ
+ SSS[    @SSS     SSS[  SSSb     ]SSS     #SSSM|     SSSQ    ]SSSQ
+ SSS[    @SSS     SSS[  SSSQ     @SSS   #QSSS^       SSSQ    ]SSSQ
+ SSS[    @SSS     SSS[  QSSSQQQQQSSSF  SSSSSSSSSSSS  %SSSSSSSSSSSQ
+ PPP"    "PPP     PPP+   ^FBWWWWBEP`   "PPPPPPPPPPT    "+PPPPPPPP"
+ .---------------------------------------------------------------.
+ |    Follow the prompts to scaffold a Mozu Extension package.   |
+ |  You'll get a directory structure, action file skeletons, and |
+ |                       a test framework!                       |
+ '---------------------------------------------------------------'
 
- */
+*/
 ```
 
 *You can style your text with [chalk](https://github.com/sindresorhus/chalk) before passing it to `mosay`.*
@@ -75,29 +62,17 @@ $ mosay --help
   Example
     mosay "Who's ready for seasonal flavors?!"
 
- ;ppppppppppppppppppppppppppppppppppppppppppppppp,       
- MOZUMOZUMOZUMOZUMOZUMOZUMOZUMOZUMOZUMOZUMOZUMOZUMOZQp   
- MOZUMOZUMOZUMOZUMOZUMOZUMOZUMOZUMOZUMOZUMOZUMOZUMOZUMQ, 
- MOZUMOZUMOZUMOZUMOZUMOZUMOZUMOZUMOZUMOZUMOZUMOZUMOZUMOZp
- MOZUMOZUMOZUMOZUMOZUMOZUMOZUMOZUMOZUMOZUMOZUMOZUMOZUMOZQ
- MOZUMOZUMO ``````````` MOZUMOZUMO '````````'`5MOZUMOZUMO
- MOZUMOZUMO             MOZUMOZUMO             MOZUMOZUMO
- MOZUMOZUMO             MOZUMOZUMO             MOZUMOZUMO
- MOZUMOZUMO             MOZUMOZUMO             MOZUMOZUMO
- MOZUMOZUMO             MOZUMOZUMO             MOZUMOZUMO
- MOZUMOZUMO             MOZUMOZUMO             MOZUMOZUMO
- MOZUMOZUMO             MOZUMOZUMO             MOZUMOZUMO
- MOZUMOZUMO             MOZUMOZUMO             MOZUMOZUMO
- MOZUMOZUMO             MOZUMOZUMO             MOZUMOZUMO
- MOZUMOZUMO             MOZUMOZUMO             MOZUMOZUMO
- MOZUMOZUMO             MOZUMOZUMO             MOZUMOZUMO
- MOZUMOZUMO             MOZUMOZUMO             MOZUMOZUMO
- MOZUMOZUMO             MOZUMOZUMO             MOZUMOZUMO
- BMOZUMOZUM             MOZUMOZUMO             MOZUMOZUMO
- .------------------------------------------------------.
- |          Who's ready for seasonal flavors?!          |
- '------------------------------------------------------'
-
+ ,,,,,,,,,,,,,,,,,,        ,,,,,,      ,,,,,,,,,,,,  ,,,      ,,, 
+ SSSSSSSSSSSSSSSSSSSQ   ;QSSSSSSSSSQ,  SSSSSSSSSSSS  SSSQ    ]SSSQ
+ SSS#""""@SSS""""YSSSQ  SSSS"""""QSSS  ^T777T@SSS#^  SSSQ    ]SSSQ
+ SSS[    @SSS     SSS[  SSSb     ]SSS      ,QSSSN    SSSQ    ]SSSQ
+ SSS[    @SSS     SSS[  SSSb     ]SSS     #SSSM|     SSSQ    ]SSSQ
+ SSS[    @SSS     SSS[  SSSQ     @SSS   #QSSS^       SSSQ    ]SSSQ
+ SSS[    @SSS     SSS[  QSSSQQQQQSSSF  SSSSSSSSSSSS  %SSSSSSSSSSSQ
+ PPP"    "PPP     PPP+   ^FBWWWWBEP`   "PPPPPPPPPPT    "+PPPPPPPP"
+ .---------------------------------------------------------------.
+ |               Who's ready for seasonal flavors?               |
+ '---------------------------------------------------------------'
 
 ```
 
