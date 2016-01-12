@@ -29,7 +29,7 @@ describe('mosay', function () {
     var testName = 'correctly-formatted';
     var expected = mosay('Hi');
 
-    fs.readFile(getFixturePath(testName), function (err, data) {
+    fs.readFile(getFixturePath(testName), 'utf8', function (err, data) {
       assert.ifError(err);
       assert.equal(JSON.parse(data), expected);
       done();
@@ -40,7 +40,7 @@ describe('mosay', function () {
     var testName = 'length-customization';
     var expected = mosay('Hi', { maxLength: 8 });
 
-    fs.readFile(getFixturePath(testName), function (err, data) {
+    fs.readFile(getFixturePath(testName), 'utf8', function (err, data) {
       assert.ifError(err);
       assert.equal(JSON.parse(data), expected);
       done();
@@ -51,7 +51,7 @@ describe('mosay', function () {
     var testName = 'override-maxLength';
     var expected = mosay('Hello, buddy!', { maxLength: 4 });
 
-    fs.readFile(getFixturePath(testName), function (err, data) {
+    fs.readFile(getFixturePath(testName), 'utf8', function (err, data) {
       assert.ifError(err);
       assert.equal(JSON.parse(data), expected);
       done();
@@ -63,7 +63,7 @@ describe('mosay', function () {
       var testName = 'ansi';
       var expected = mosay(chalk.red.bgWhite('Hi'));
 
-      fs.readFile(getFixturePath(testName), function (err, data) {
+      fs.readFile(getFixturePath(testName), 'utf8', function (err, data) {
         assert.ifError(err);
         assert.equal(JSON.parse(data), expected);
         done();
@@ -74,7 +74,7 @@ describe('mosay', function () {
       var testName = 'half-ansi';
       var expected = mosay(chalk.red.bgWhite('Hi') + ' there, sir!');
 
-      fs.readFile(getFixturePath(testName), function (err, data) {
+      fs.readFile(getFixturePath(testName), 'utf8', function (err, data) {
         assert.ifError(err);
         assert.equal(JSON.parse(data), expected);
         done();
@@ -85,7 +85,7 @@ describe('mosay', function () {
       var testName = 'wrap-ansi-styles';
       var expected = mosay(chalk.red.bgWhite('Hi') + ' there, sir! ' + chalk.bgBlue.white('you are looking') + ' swell today!');
 
-      fs.readFile(getFixturePath(testName), function (err, data) {
+      fs.readFile(getFixturePath(testName), 'utf8', function (err, data) {
         assert.ifError(err);
         assert.equal(JSON.parse(data), expected);
         done();
