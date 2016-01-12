@@ -1,8 +1,8 @@
 {
-  "name": "mosay",
+  "name": "mozu-say",
   "version": "2.1.0",
   "description": "Say it loud. Say it with a large Mozu logo.",
-  "license": "BSD",
+  "license": "MIT",
   "keywords": [
     "cli",
     "bin",
@@ -15,7 +15,10 @@
     "ansi"
   ],
   "author": "James Zetlen @ Volusion and the Yeoman team",
-  "repository": "zetlen/mosay",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/mozu/mozu-say.git"
+  },
   "bin": {
     "mosay": "cli.js"
   },
@@ -27,13 +30,16 @@
     "node": ">=0.10.0"
   },
   "scripts": {
-    "test": "mocha"
+    "test": "mocha",
+    "ci-build": "npm test",
+    "ci-build-stable": "npm run ci-build",
+    "postci-build-stable": "mozu-validate-npm-package",
+    "cov": "istanbul cover _mocha"
   },
   "dependencies": {
     "ansi-regex": "^1.0.0",
     "ansi-styles": "^2.0.0",
     "chalk": "^1.0.0",
-    "minimist": "^1.1.0",
     "pad-component": "0.0.1",
     "string-length": "^1.0.0",
     "strip-ansi": "^2.0.0",
@@ -41,6 +47,8 @@
     "word-wrap": "^1.0.0"
   },
   "devDependencies": {
-    "mocha": "*"
+    "istanbul": "^0.4.2",
+    "mocha": "*",
+    "mozu-validate-npm-package": "^1.0.1"
   }
 }
