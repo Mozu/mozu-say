@@ -10,18 +10,19 @@ var ansiRegex = require('ansi-regex')();
 var topOffset = 1;
 var leftOffset = 1
 
-var defaultGreeting = chalk.red(
-'\n ,,,,,,,,,,,,,,,,,,        ,,,,,,      ,,,,,,,,,,,,  ,,,      ,,, ' +       
-'\n SSSSSSSSSSSSSSSSSSSQ   ;QSSSSSSSSSQ,  SSSSSSSSSSSS  SSSQ    ]SSSQ' +       
-'\n SSS#""""@SSS""""YSSSQ  SSSS"""""QSSS  ^T777T@SSS#^  SSSQ    ]SSSQ' +       
-'\n SSS[    @SSS     SSS[  SSSb     ]SSS      ,QSSSN    SSSQ    ]SSSQ' +       
-'\n SSS[    @SSS     SSS[  SSSb     ]SSS     #SSSM|     SSSQ    ]SSSQ' +       
-'\n SSS[    @SSS     SSS[  SSSQ     @SSS   #QSSS^       SSSQ    ]SSSQ' +       
-'\n SSS[    @SSS     SSS[  QSSSQQQQQSSSF  SSSSSSSSSSSS  %SSSSSSSSSSSQ' +       
-'\n PPP"    "PPP     PPP+   ^FBWWWWBEP`   "PPPPPPPPPPT    "+PPPPPPPP"' +       
-"\n");
+const asciiArtLines = [
+  "\n                 db   dD d888888b d8888b.  .d88b. ",
+  "\n                 88 ,8P'   `88'   88  `8D .8P  Y8.",
+  "\n                 88,8P      88    88oooY' 88    88",
+  "\n                 88`8b      88    88~~~b. 88    88",
+  "\n                 88 `88.   .88.   88   8D `8b  d8'",
+  "\n                 YP   YD Y888888P Y8888P'  `Y88P'",
+  "\n"
+];
+var defaultGreeting = chalk.red(asciiArtLines.join(''));
 
-module.exports = function (message, options) {
+module.exports = function (message, options, greeting) {
+  greeting = greeting || defaultGreeting;
   message = (message || 'Welcome to Yeoman, powered by Mozu.').trim();
   options = options || {};
 
@@ -71,7 +72,7 @@ module.exports = function (message, options) {
     styledIndexes[offset] = styledIndexes[offset] ? styledIndexes[offset] + match : match;
   });
 
-  return defaultGreeting + wrap(stripAnsi(message), { width: maxLength })
+  return greeting + wrap(stripAnsi(message), { width: maxLength })
     .split(/\n/)
     .reduce(function (greeting, str, index, array) {
       var paddedString;

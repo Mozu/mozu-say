@@ -27,15 +27,10 @@
     "cli.js"
   ],
   "engines": {
-    "node": ">=0.10.0"
+    "node": "*"
   },
   "scripts": {
-    "test": "mocha",
-    "ci-build": "npm test",
-    "ci-build-stable": "npm run ci-build",
-    "postci-build-stable": "mozu-validate-npm-package",
-    "cov": "istanbul cover _mocha",
-    "prepublish": "mozu-npm-publish-check"
+   
   },
   "dependencies": {
     "ansi-regex": "^2.0.0",
